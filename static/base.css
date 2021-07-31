@@ -1,0 +1,15 @@
+.yunterest_font{
+    margin-top: 1rem;
+    font-family: 'Concert One', cursive;
+}
+.yunterest_header{
+    text-align: center;
+    margin: 2rem 0;
+}
+.yunterest_footer{
+    text-align: center;
+    margin-top: 2rem;
+}
+.yunterest_footer_button{
+    font-size: .7rem;
+}
