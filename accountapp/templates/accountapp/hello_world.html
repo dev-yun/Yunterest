@@ -3,7 +3,21 @@
 {%  block content %}
 
     <div style="height: 20rem; background-color : #38df81; border-radius: 1rem; margin: 2rem">
-        <h1>Hello_world</h1>
+        <h1>
+            testing
+        </h1>
+
+
+        <form action="/account/hello_world/" method="post">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="POST">
+            {#  btn btn-primary => bootstrap에 저장된 버튼 클래스  #}
+        </form>
+
+
+        <h1>
+            {{ text }}
+        </h1>
     </div>
 
 {% endblock %}
