@@ -13,3 +13,6 @@
 .yunterest_footer_button{
     font-size: .7rem;
 }
+.not_change_link_color{
+    color:black; text-decoration: none;
+}
