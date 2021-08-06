@@ -1,6 +1,8 @@
 <div class="yunterest_header">
     <div>
-        <h1 class="yunterest_font">Yunterest</h1>
+        <a href="{% url 'accountapp:hello_world' %}" style="text-decoration: none; color: black" >
+            <h1 class="yunterest_font">Yunterest</h1>
+        </a>
     </div>
     <div>
         <span>nav1</span>
@@ -10,6 +12,9 @@
         <a href="{% url 'accountapp:login' %}?next={{ request.path }}">
 {#   request.path는 요청받은 경로를 의미하며 쉽게 말하면 login후 해당 url을 누른 페이지로 돌아간다는 말이다. #}
             <span>login</span>
+        </a>
+        <a href="{% url 'accountapp:create' %}">
+            <span>SighUp</span>
         </a>
         {% else %}
         <a href="{% url 'accountapp:detail' pk=user.pk %}">
