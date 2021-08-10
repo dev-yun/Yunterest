@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <style>
+
+        .container div {
+            background-color: antiquewhite;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1rem;
+        }
+
+        .container img{
+            width: 100%;
+            border-radius: 1rem;
+        }
+
+    </style>
+
+
+    <div class="container">
+
+        <div>
+            <img src="https://picsum.photos/200/300" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/200" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/250" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/340" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/330" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/300" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/280" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/260" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/380" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/350" alt="Lorem">
+        </div>
+        <div>
+            <img src="https://picsum.photos/200/320" alt="Lorem">
+        </div>
+    </div>
+
+
+    <script src="{% static 'js/magicgrid.js' %}"></script>
+{% endblock %}
