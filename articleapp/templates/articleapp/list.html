@@ -21,48 +21,29 @@
 
     </style>
 
+    {% if article_list %}
+        <div class="container">
+            {% for article in article_list %}
+                <a href="{% url 'articleapp:detail' pk=article.pk %}">
+                    <div>
+                        {% include 'snippets/card.html' with article=article %}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+        <script src="{% static 'js/magicgrid.js' %}"></script>
+    {% else %}
+        <div style="text-align: center">
+            <h1>No Articles Yet!</h1>
+        </div>
+    {% endif %}
 
-    <div class="container">
+    {% include 'snippets/pagination.html' with page_obh=page_obj %}
 
-        <div>
-            <img src="https://picsum.photos/200/300" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/200" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/250" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/340" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/330" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/300" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/280" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/260" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/380" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/350" alt="Lorem">
-        </div>
-        <div>
-            <img src="https://picsum.photos/200/320" alt="Lorem">
-        </div>
-    </div>
     <div style="text-align: center">
         <a href="{% url 'articleapp:create' %}" class="btn btn-dark rounded-pill col-3 mt-3 mb-3">
             Create Article
         </a>
     </div>
 
-    <script src="{% static 'js/magicgrid.js' %}"></script>
 {% endblock %}
