@@ -32,6 +32,14 @@
             {% endif %}
             <hr>
 
+            <div style="text-align: left; margin-bottom: 2rem">
+                <h4 class="yunterest_font">Comment</h4>
+            </div>
+            {% for comment in target_article.comment.all %}
+                {% include 'commentapp/detail.html' with comment=comment %}
+            {% endfor %}
+
+
             {% include 'commentapp/create.html' with article=target_article %}
 
         </div>
