@@ -92,3 +92,5 @@ media/
 key_yunterest.pem
 
 Dockerfile
+
+nginx.conf
