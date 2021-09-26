@@ -30,9 +30,6 @@ urlpatterns = [
     path('comments/', include('commentapp.urls')),
     path('projects/', include('projectapp.urls')),
     path('subscriptions/', include('subscriptionapp.urls')),
-<<<<<<< HEAD
     path('likes/', include('likeapp.urls')),
 
-=======
->>>>>>> 2fe9341110580d82e91025b11ca99860b6875add
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

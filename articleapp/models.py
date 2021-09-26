@@ -13,10 +13,5 @@ class Article(models.Model):
     image = models.ImageField(upload_to='article/', null=False)
     content = models.TextField(null=True)
 
-<<<<<<< HEAD
     created_at = models.DateField(auto_now_add=True, null=True)
-
     like = models.IntegerField(default=0)
-=======
-    created_at = models.DateField(auto_now_add=True, null=True)
->>>>>>> 2fe9341110580d82e91025b11ca99860b6875add
